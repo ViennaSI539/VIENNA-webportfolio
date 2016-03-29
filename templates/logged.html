@@ -1,0 +1,17 @@
+{%extends "templates/base.html" %}
+
+{% block nav %}	
+<ul class="nav nav-pills" id="tablist">
+	<li><a href = "index.html">PORTFOLIO</a></li>
+	<li><a href = "resume.html">REMUSE</a></li>
+	<li><a href = "contact.html">CONTACT</a></li>
+	<li class="active"><a href = "login.html">LOGIN</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<!-- use block.contecnt to block the form action from the other pages-->
+	<p>
+		You have successfully logged in!! Way to go!
+	</p>
+{%endblock%}

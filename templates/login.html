@@ -1,0 +1,26 @@
+{%extends "templates/base.html" %}
+
+{% block nav %}	
+	
+<!--<ul class="nav nav-pills" id="tablist">
+	<li><a href = "index.html">PORTFOLIO</a></li>
+	<li><a href = "resume.html">REMUSE</a></li>
+	<li><a href = "contact.html">CONTACT</a></li>
+	<li class="active"><a href = "login.html">LOGIN</a></li>
+</ul>
+-->
+{% endblock %}
+
+{% block content %}
+	<p>
+		{{hint}}
+	</p>
+
+
+	<form action = "/login.html" method = "post"> 
+	<!-- form drop user's input data to "/login.html" -->
+		<label>username: <input type = "text" name = "name"></label>
+		<br><label>password: <input type = "password" name = "pw"></label>
+		<br><input type = "submit" value = "login"> 
+	</form>
+{% endblock %}

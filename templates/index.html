@@ -1,0 +1,28 @@
+{% extends "templates/base.html" %}
+ 
+{% block nav %}	
+<!--<ul class="nav nav-pills" id="tablist">
+	<li {% if title == "HOME"%} class = "active" {% endif %}><a href = "index.html">PORTFOLIO</a></li>
+	<li><a href = "resume.html">REMUSE</a></li>
+	<li><a href = "contact.html">CONTACT</a></li>
+	<li><a href = "login.html">LOGIN</a></li>
+</ul>-->
+{% endblock %}
+
+{% block content %} 
+<div class="projects">
+	<div class="container">
+		<p>
+			Project 1:AQI Monitor
+			<br><img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
+			<br>
+			<br><img src = "static/kerrytown court.jpg" alt = "Residential Design" width="800"/>
+			<br>
+			<br><img src = "static/highrise.jpg" alt = "High Rise Office Building" width="800"/>
+			<br>
+			<!-- <img src="/i/ct_1px.gif" width="60%" height="30px" /> the width and height of the img will stay the same. -->
+			Here is a link to my <a href = "https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo">Linkedin webpage</a>.
+		</p>
+	</div>
+</div>
+{%endblock%}
