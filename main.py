@@ -42,7 +42,12 @@ class MainHandler(webapp2.RequestHandler):
         elif path == '/login.html':
             template = JINJA_ENVIRONMENT.get_template('templates/login.html')
             self.response.write(template.render({'title':'LOGIN'}))
-
+        elif path == '/kerrytown-court.html':
+            template = JINJA_ENVIRONMENT.get_template('templates/kerrytown-court.html')
+            self.response.write(template.render({'title':'KERRYTOWN-COURT'}))
+        elif path == '/index.html#title-wrap':
+            title = 'SELECTEDWORKS'
+           
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
@@ -73,4 +78,6 @@ app = webapp2.WSGIApplication([
     ('/resume.html', MainHandler),
     ('/contact.html', MainHandler),
     ('/login.html', LoginHandler),
+    ('/index.html#title-wrap',MainHandler),
+    ('/kerrytown-court.html',MainHandler),
 ], debug=True)

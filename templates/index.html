@@ -1,12 +1,10 @@
 {% extends "templates/base.html" %}
  
-{% block nav %}	
-
-{% endblock %}
 
 {% block content %} 
 <!-- carousel -->
 	
+
   <div class="placeholder">
   </div>
 
@@ -66,93 +64,107 @@
 </div>
 
 
-<div class="portfolio">
-	 <br>
-   <br>
-   <br>
-   <!--portfolio photo gallery-->
 
- <div id="title-wrapper">
-  <p class="icon"> <img src="static/icon.png" alt="icon" width="20" height="20"/></p>
-  <p class="circle"> <img src="static/icon.png" alt="icon" width="20" height="20"/></p>
-  <h2>Selected Work</h2>
-</div>
-  <div class="responsive">
-    <div class="img">
-      <a target="_blank" href="#"> <!--to be replaced with individual project page-->
-        <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
-      </a>
-      <div class="desc">kerrytown court</div>
-    </div>
-  </div>
-
-
-  <div class="responsive">
-    <div class="img">
-      <a target="_blank" href="#"> <!--to be replaced with individual project page-->
-        <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-
-  <div class="responsive">
-    <div class="img">
-       <a target="_blank" href="#"> <!--to be replaced with individual project page-->
-        <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-
-  <div class="responsive">
-    <div class="img">
-       <a target="_blank" href="#"> <!--to be replaced with individual project page-->
-        <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-</div>
-
-<div class="clearfix"></div>
-
-
-
-
-
-    <div class="row">
-      <div class='col-sx-4 col-xs-12 portfolio' data-filter="UX">
-        <a href="https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo">
-          <img src = "static/AQI.jpg" class="img-responsive" alt = "AQI Monitor" width="800"/>
-        </a>
-		    <a href="#" class="thumbnail">
-            <<img src = "static/kerrytown court.jpg" alt = "Residential Design" width="800"/>
-        </a>
-        <a href="#" class="thumbnail">
-          <img src = "static/highrise.jpg" alt = "High Rise Office Building" width="800"/>
-        </a>
-        <a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a>
-        <a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a><a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a><a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a><a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a><a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a>
-        </a><a href="#" class="thumbnail">
-          <img src = "static/AQI.jpg" alt = "AQI Monitor" width="800"/>
-        </a>
 	
-			<!-- <img src="/i/ct_1px.gif" width="60%" height="30px" /> the width and height of the img will stay the same. -->
-			Here is a link to my <a href = "https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo">Linkedin webpage</a>.
-	   </div>
-   </div>
 
+   <!--selected work icon================================== -->
+
+ <div id="title-wrap">
+  <div class="icon.center">
+    <img class="hover-color" id="myImage" src="static/brain.png" alt="icon"/>
+    <h2>Selected Works</h2>
+    <p>architecture/ux design</p>
+    {{title}}
+  </div>
+</div>
+
+
+   <!--portfolio photo gallery=================================-->
+
+<div class='photo-gallery' id='photo-wrap'>
+<div class='container'>
+  <div class="responsive col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="img">
+      <a href="kerrytown-court.html"> <!--to be replaced with individual project page-->
+        <img src="static/kerrytown court.jpg" alt="kerrytown court" >
+      </a>
+      <div class="desc">kerrytown Court</div>
+    </div>
+  </div>
+
+
+  <div class="responsive">
+    <div class="img">
+      <link target="_blank" href="blanktest.html"> <!--to be replaced with individual project page-->
+        <img src="static/highrise.jpg" alt="High Rise Office Building" >
+      </a>
+      <div class="desc">High Rise Office Building</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="img">
+       <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+        <img src="static/eco center.jpg" alt="eco center" >
+      </a>
+      <div class="desc">Eco Center</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="img">
+       <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+        <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+      <div class="img">
+         <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+          <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+  </div>
+
+  <div class="responsive">
+      <div class="img">
+         <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+          <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+  </div>
+
+<div class="responsive">
+    <div class="img">
+       <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+        <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+      <div class="img">
+         <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+          <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+  </div>
+
+  <div class="responsive">
+      <div class="img">
+         <a target="_blank" href="#"> <!--to be replaced with individual project page-->
+          <img src="static/kerrytown court.jpg" alt="kerrytown court" width="400" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+  </div>
+
+</div>
 </div>
 {%endblock%}

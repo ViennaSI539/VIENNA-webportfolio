@@ -2,7 +2,9 @@ media="all"
 
 body{
 	font-family:Roboto, Helvetica, Arial,sans-serif;
+	padding-top: 128px;
 }
+
 
 
 h2 {
@@ -10,6 +12,15 @@ h2 {
 	color:blue;
 	font:Roboto;
 }
+
+header {
+    position: fixed;
+}
+
+.nav-up {
+    top: -128px;
+}
+
 
 .row {
 	margin-right: -50px;
@@ -126,7 +137,6 @@ ul li:first-child:before {content:""};*/
 
 .projects p{
 	display: block;
-	align
 }
 
 .active li{
@@ -159,7 +169,7 @@ ul li:first-child:before {content:""};*/
 
 .carousel-inner{
   width:100%;
-  max-height: 380px !important;
+  max-height: 700px !important;
 }
 
 .carousel .container {
@@ -275,43 +285,38 @@ ul li:first-child:before {content:""};*/
    height: 380px;
    overflow: hidden;
 }
-
-/*title-wrapper portfolio*/
-#title-wrapper {
-	height: 300px;
-	background-color: #fafafa;
-
+}
+/*title-wrapper portfolio---------------------------------*/
+#title-wrap {
+	height: 250px;
+	/*background-color: #fafafa;*/
 }
 
-#title-wrapper h2{
+#title-wrap img{
+	height: 100px;
+    width: 100px;
+    display: block;
+    margin: 120px auto;
+    margin-bottom: 0px;
+}
+
+#title-wrap h2{
 	text-align: center;
 	color: #337ab7;
 	position:relative;
-	top: -20%;
+	top: -40%;
 	
 }
 
-#title-wrapper .icon{
+#title-wrap p{
 	text-align: center;
-	color: #337ab7;
-	position:relative;
-	top: 50%;
-	
 }
 
-#title-wrapper .circle{
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-	text-align: center;
-	color: #337ab7;
-	position:relative;
-	top: 50%;
-	opacity: 0%;
-	
+/*portfolio photo gallery-----------------*/
+.photo-gallery {
+	height:1150px;
 }
 
-/*portfolio photo gallery*/
 div.img {
     border: 1px solid #ccc;
 }
@@ -358,3 +363,20 @@ div.desc {
     display: table;
     clear: both;
 }
+
+/*footer--------------------------------*/
+#footer-wrap {
+	margin-top: 60px;
+	border-top: 6px solid #337ab7;
+	height: 200px;
+
+}
+
+#footer-wrap .container{
+	margin-top: 40px;
+}
+
+.blue {
+	color:#337ab7;
+}
+
