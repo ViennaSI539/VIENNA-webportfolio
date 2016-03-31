@@ -314,11 +314,12 @@ ul li:first-child:before {content:""};*/
 
 /*portfolio photo gallery-----------------*/
 .photo-gallery {
-	height:1150px;
+	height:1350px;
 }
 
-div.img {
+.responsive.img {
     border: 1px solid #ccc;
+    clip:rect(10px,388px,388px,10px);
 }
 
 div.img:hover {
@@ -364,6 +365,10 @@ div.desc {
     clear: both;
 }
 
+.photo-1-column img{
+	float:left;
+	vertical-align: left;
+}
 /*footer--------------------------------*/
 #footer-wrap {
 	margin-top: 60px;
