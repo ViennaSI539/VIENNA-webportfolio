@@ -78,11 +78,8 @@
 								<li {% if title == "HOME"%} class = "active" {% endif %}><a href = "index.html">HOME</a></li>
 								<li {% if title == "SELECTEDWORKS"%} class = "active" {% endif %}><a href="/index.html#title-wrap"> SELECTED WORKS</a></li>
 								<li  {% if title == "RESUME"%} class = "active" {% endif %}><a href = "resume.html">RESUME</a></li>
-								<!--
 								<li {% if title == "CONTACT"%} class = "active" {% endif %}><a href = "contact.html">CONTACT</a></li>
-								-->		
-
-								<li {% if title == "LOGIN"%} class = "active" {% endif %}><a href = "login.html">EMAIL</a></li>
+								
 							</ul>
 						</div>	
 					</div>
@@ -92,20 +89,21 @@
 
   
 
-
+    <div class='page-wrap'>
 	{% block content %}	
 	I should never see this content.  It should be replaced.
 	{% endblock %}
+	</div>
 
 	<footer>
 		<div id='footer-wrap'>
 			<div class='container topline' >
-		<p class='blue'>Thank you for stopping by :)</P>
-		<p class='black'>I am a graduate student in Architecture.  I am actively looking for a full-time architectural designer position in New York City.</p> 
-		<p><a href='mailto:qinyingl@umich.edu'>Drop me a line</a> if you are interested.</p>
-		<p>Copyright &copy; Vienna Qinying Li from <a href="https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo"> University of Michigan Ann Arbor</a>.</p>
+				<p class='blue'>Thank you for stopping by :)</P>
+				<p>I am Vienna Qinying Li, a master student of architecture from <a class="bold" href="https://www.umich.edu/"> University of Michigan Ann Arbor</a>.</p>
+				<p><a class="bold" href='mailto:qinyingl@umich.edu'>Drop me a line</a> if you are interested.</p>
+				<p>Copyright &copy; Vienna Qinying Li </p>
+			</div>
 		</div>
-	</div>
 	</footer>
 	
 </body>

@@ -130,6 +130,10 @@ ul li:first-child:before {content:""};*/
 	float: right;
 }
 
+a: {
+
+}
+
 .logo #logo{
 	margin-top: 0px
 	margin-bottom:0px;
@@ -179,13 +183,20 @@ ul li:first-child:before {content:""};*/
 
 .carousel-caption {
       max-width: 550px;
-      margin:0 auto;
+    
       margin-top: 200px;
-      text-align:center;
 }
 
 .carousel-caption h3{
       font-size: 50px;
+}
+
+.center {
+	margin:0 auto
+}
+
+.text-center{
+	text-align:center;
 }
 
 .carousel-control {
@@ -369,12 +380,33 @@ div.desc {
 	float:left;
 	vertical-align: left;
 }
-/*footer--------------------------------*/
-#footer-wrap {
-	margin-top: 60px;
-	border-top: 6px solid #337ab7;
-	height: 200px;
+/*sticky footer--------------------------------*/
 
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#footer-wrap {
+	border-top: 6px solid #337ab7;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -200px; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+#footer-wrap, .page-wrap:after{
+	height: 200px;
 }
 
 #footer-wrap .container{
@@ -385,3 +417,74 @@ div.desc {
 	color:#337ab7;
 }
 
+.bold {
+	font-weight: bold;
+}
+
+
+/* contact page*/
+.profile {
+	height:180px;
+	width:auto;
+	border:10px solid #337ab7;
+	margin-bottom: 20px;
+}
+
+#intro {
+	margin-top: 50px;
+}
+
+#leave-a-message {
+	padding-top: 50px;
+	padding-bottom: 100px;
+	width: 790px;
+    margin: 0 auto;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+   	border: 2px solid #337ab7;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    outline: none;
+}
+
+
+input[type=submit] {
+    background-color: #337ab7;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #337ab7;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+input:hover, textarea:hover{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+ -webkit-box-shadow: 0px 0px 8px 0px #337ab7;
+-moz-box-shadow:    0px 0px 8px 0px #337ab7;
+box-shadow:         0px 0px 8px 0px #337ab7;
+}
+/*
+http://stackoverflow.com/questions/25685794/css-image-border-glow-when-hover-with-individual-color
+*/

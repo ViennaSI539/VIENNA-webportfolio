@@ -39,9 +39,6 @@ class MainHandler(webapp2.RequestHandler):
         elif path == '/contact.html':
             template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
             self.response.write(template.render({'title':'CONTACT'}))
-        elif path == '/login.html':
-            template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-            self.response.write(template.render({'title':'LOGIN'}))
         elif path == '/kerrytown-court.html':
             template = JINJA_ENVIRONMENT.get_template('templates/kerrytown-court.html')
             self.response.write(template.render({'title':'KERRYTOWN-COURT'}))
@@ -49,26 +46,7 @@ class MainHandler(webapp2.RequestHandler):
             title = 'SELECTEDWORKS'
            
 
-class LoginHandler(webapp2.RequestHandler):
-    def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-        self.response.write(template.render({'title': 'LOGIN'}))
-    def post(self):
-        name = self.request.get('name')
-        pw = self.request.get('pw')
-        
-        logging.info('The Name the user types in is ' + name + ' and the PW the user types in is ' + pw)
-        rightname = 'Colleen'
-        rightpw = 'pass'
-        if name == rightname and pw == rightpw :
-            template = JINJA_ENVIRONMENT.get_template('templates/logged.html')
-            self.response.write(template.render({'title':'LOGGED IN...'}))
 
-        else :
-            #logging.info-put the texts with time in log, logging.exception-put the texts with error in front.
-            logging.exception('Bad credentials.')
-            template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-            self.response.write(template.render({'title':'LOGIN','hint':'Bad credentials. Try again.'}))# tip is a variable that will show if the input is a wrong name/pw.
           
 
 
@@ -77,7 +55,6 @@ app = webapp2.WSGIApplication([
     ('/index.html', MainHandler),
     ('/resume.html', MainHandler),
     ('/contact.html', MainHandler),
-    ('/login.html', LoginHandler),
     ('/index.html#title-wrap',MainHandler),
     ('/kerrytown-court.html',MainHandler),
 ], debug=True)
