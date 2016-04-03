@@ -11,9 +11,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrit=
-	"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="
-	anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrit="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="static/script.js"></script>
 
@@ -32,21 +30,21 @@
 <body>
 	<!--<div id="page-wrapper" class="page_content" style="height:auto;"-->
 
-		<header id="header" class="navbar navbar-default navbar-fixed-top" >
+		<header id="header" class="navbar-fixed-top" > <!--bootstrap-->
 				<div id="info-wrap">
 					<div class="container">
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<ul class="info-left""col-lg-8""col-md-8""col-sm-8">
+							<ul class="info-left">
 								<li>
-									<p><img src = "static/email.png" width="12"/>
+									<p><img src = "static/email.png" alt="email" width="12"/>
 										qinyingl@umich.edu</p>
 								</li>
 								<li>
-									<p><img src = "static/phone.png" width="12"/>
+									<p><img src = "static/phone.png" alt="phone" width="12"/>
 										734 239 4518</p>
 								</li>
 								<li>
-									<p><img src = "static/add.png" width="12"/>
+									<p><img src = "static/add.png" alt="address" width="12"/>
 										Ann Arbor, MI 48105</p>
 								</li>
 							</ul>
@@ -54,15 +52,16 @@
 						<div class="col-sm-4 col-xs-12">
 							<ul class="social-media">
 								<li><a href="https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo">
-								<img src = "static/linkedin.png" width="20"/></a>
+								<img src = "static/linkedin.png" alt="linkedin" width="20"/></a>
 								</li>
 								<li><a href="https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo">
-								<img src = "static/fb.png" width="20"/></a>
+								<img src = "static/fb.png" alt="facebook" width="20"/></a>
 								</li>								
 							</ul>
 						</div>
 					</div>
 				</div >
+
 				<div id="navbar-wrap">
 					<div class="container">
 						<div class="left-side">
@@ -72,9 +71,8 @@
 								</h1> 
 							</div>
 						</div>
-						<div class="right-side">
-							<ul class="nav nav-pills custom-pills" id="tablist">
-
+						<div >
+							<ul class="nav nav-pills custom-pills" id="tablist"> <!--bootstrap-->
 								<li {% if title == "HOME"%} class = "active" {% endif %}><a href = "index.html">HOME</a></li>
 								<li {% if title == "SELECTEDWORKS"%} class = "active" {% endif %}><a href="/index.html#title-wrap"> SELECTED WORKS</a></li>
 								<li  {% if title == "RESUME"%} class = "active" {% endif %}><a href = "resume.html">RESUME</a></li>
@@ -85,7 +83,7 @@
 					</div>
 				</div>		
 		</header>
-    </div>
+   
 
   
 

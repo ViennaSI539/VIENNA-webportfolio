@@ -13,6 +13,7 @@ h2 {
 	font:Roboto;
 }
 
+/*header hides on scoll up, shows on scroll down*/
 header {
     position: fixed;
 }
@@ -26,10 +27,10 @@ header {
 	margin-right: -50px;
 	margin-left: -50px;
 }
+
 .info-left {
 	padding-left: 0px;
 	margin-bottom: 0px;
-
 }
 
 .info-left li {
@@ -39,7 +40,7 @@ header {
 
 }
 
-.info-left P {
+.info-left p{
 	color: rgb(255,255,255);
 	margin:0px;
 }
@@ -130,9 +131,6 @@ ul li:first-child:before {content:""};*/
 	float: right;
 }
 
-a: {
-
-}
 
 .logo #logo{
 	margin-top: 0px
@@ -143,10 +141,15 @@ a: {
 	display: block;
 }
 
-.active li{
-	background-color: #337ab7;
+.custom-pills a:hover{
+  background-color: #eeeeee;
+  border-radius: 5px; 
 }
 
+.custom-pills .active{
+	background-color: #337ab7;
+  border-radius: 5px; 
+}
 
 
 /*placeholder------------------------------*/
@@ -395,9 +398,8 @@ html, body {
 }
 
 .page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -200px; 
+  min-height: 100%; 
+  margin-bottom: -200px;  /* equal to footer height */
 }
 
 .page-wrap:after {
