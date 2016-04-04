@@ -6,7 +6,7 @@
 
 <div class="text-center" id="intro">
 
-<img class="profile img-circle" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANsAAAAJGYyYjFhNGVjLTE5YzctNDlhZi1hZjUyLTVlNWRkNDg4NzIzMA.jpg"/>
+<img class="profile img-circle" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANsAAAAJGYyYjFhNGVjLTE5YzctNDlhZi1hZjUyLTVlNWRkNDg4NzIzMA.jpg" alt="profile"/>
 
 <p >
 		I am Vienna Qinying Li, a master student of architecture from University of Michigan Ann Arbor.
@@ -22,19 +22,20 @@
 </div>
 
 <div class="form" id="leave-a-message">
-	<form class="center text-center" action="action_page.php" method="get">
+	<form class="center text-center" method="post" action="mailto:you@yourwebsite.com">
 	<!--The action attribute defines the action to be performed when the form is submitted.-->
 	  <label>NAME:</label>
 	  <input type="text" name="name">
 	  <br>
 	  <br>
 	  <label>EMAIL:</label>
-	  <input type="text" name="email">
+	  <input type="email" name="email">
 	  <br><br>
 	  <label>MESSAGE:</label>
 	  <textarea name="message">Hello...</textarea>
 	  <br><br>
   	  <input type="submit" value="Submit">
+ 
 	</form>
 </div>
 {% endblock %}

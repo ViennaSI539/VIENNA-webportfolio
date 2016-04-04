@@ -42,6 +42,9 @@ class MainHandler(webapp2.RequestHandler):
         elif path == '/kerrytown-court.html':
             template = JINJA_ENVIRONMENT.get_template('templates/kerrytown-court.html')
             self.response.write(template.render({'title':'KERRYTOWN-COURT'}))
+        elif path == '/video.html':
+            template = JINJA_ENVIRONMENT.get_template('templates/video.html')
+            self.response.write(template.render({'title':'VIDEO'}))
         elif path == '/index.html#title-wrap':
             title = 'SELECTEDWORKS'
            
@@ -55,6 +58,7 @@ app = webapp2.WSGIApplication([
     ('/index.html', MainHandler),
     ('/resume.html', MainHandler),
     ('/contact.html', MainHandler),
+     ('/video.html', MainHandler),
     ('/index.html#title-wrap',MainHandler),
     ('/kerrytown-court.html',MainHandler),
 ], debug=True)

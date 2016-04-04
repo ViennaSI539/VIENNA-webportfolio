@@ -22,12 +22,6 @@ header {
     top: -128px;
 }
 
-
-.row {
-	margin-right: -50px;
-	margin-left: -50px;
-}
-
 .info-left {
 	padding-left: 0px;
 	margin-bottom: 0px;
@@ -102,11 +96,6 @@ header {
 		text-align: center;
 		}
 }
-/*ul li {float: left;
-	list-style: none;
-}
-ul li:before {content: "|";}
-ul li:first-child:before {content:""};*/
 
 #info-wrap {
 	display:block;
@@ -120,8 +109,8 @@ ul li:first-child:before {content:""};*/
 
 }
 
+/*navbar */
 #navbar-wrap {
-
 	background-image: url(bg.jpg);
 }
 
@@ -135,10 +124,6 @@ ul li:first-child:before {content:""};*/
 .logo #logo{
 	margin-top: 0px
 	margin-bottom:0px;
-}
-
-.projects p{
-	display: block;
 }
 
 .custom-pills a:hover{
@@ -310,7 +295,7 @@ ul li:first-child:before {content:""};*/
 	height: 100px;
     width: 100px;
     display: block;
-    margin: 120px auto;
+    margin: 60px auto;
     margin-bottom: 0px;
 }
 
@@ -337,12 +322,13 @@ ul li:first-child:before {content:""};*/
 }
 
 div.img:hover {
-    border: 1px solid #777;
+    border: 1px solid #337ab7;
 }
 
 div.img img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 div.desc {
@@ -360,10 +346,91 @@ div.desc {
     width: 33.333%;
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.1)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Clear Floats */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive Columns */
 @media only screen and (max-width: 992px){
     .responsive {
         width: 49.99999%;
         margin: 6px 0;
+    }
+     .modal-content {
+        width: 100%;
     }
 }
 
@@ -440,7 +507,7 @@ html, body {
 	padding-top: 50px;
 	padding-bottom: 100px;
 	width: 790px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 input[type=text] {
@@ -455,6 +522,17 @@ input[type=text] {
     outline: none;
 }
 
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #337ab7;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    outline: none;
+}
 
 input[type=submit] {
     background-color: #337ab7;
@@ -490,3 +568,14 @@ box-shadow:         0px 0px 8px 0px #337ab7;
 /*
 http://stackoverflow.com/questions/25685794/css-image-border-glow-when-hover-with-individual-color
 */
+
+/*video*/
+iframe {
+  width:100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.video p{
+  margin-bottom: 50px;
+}
