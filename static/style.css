@@ -166,7 +166,7 @@ header {
 
 .carousel .container {
       position: relative;
-      z-index: 9;
+      z-index: 5;
 }
 
 .carousel-caption {
@@ -238,6 +238,10 @@ header {
 .carousel-control .glyphicon-menu-right {
         margin: 0 -10px;
       }
+
+.carousel-indicators {
+      z-index: 5;
+}
 
 @media only screen and (max-width:992px){
     .carousel-control {
@@ -352,7 +356,7 @@ div.desc {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 6; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
