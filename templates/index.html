@@ -64,10 +64,6 @@
   </div>
 </div>
 
-
-
-	
-
    <!--selected work icon================================== -->
 
  <div id="title-wrap">
@@ -81,76 +77,75 @@
 
    <!--portfolio photo gallery=================================-->
 
-<div class='photo-gallery' id='photo-wrap'>
-<div class='container'>
+<div class='photo-gallery container' id='photo-wrap'>
 
-  <div class="responsive col-lg-4 col-md-4 col-sm-6 col-xs-12">
-    <div class="img"> <!--to be replaced with individual project page-->
-        <img src="static/kerrytown-court.jpg" alt="kerrytown-court" >
-      <div class="desc">kerrytown Court</div>
-    </div>
-  </div>
-
-
-  <div class="responsive">
-    <div class="img">
-      <!--<a target="_blank" href="#"> to be replaced with individual project page-->
-        <img src="static/highrise.jpg" alt="High-Rise" >
-      <div class="desc">High Rise Office Building</div>
-    </div>
-  </div>
-
-  <div class="responsive">
-    <div class="img">
-        <img src="static/eco-center.jpg" alt="eco-center" >
-      <div class="desc">Eco Center</div>
-    </div>
-  </div>
-
-
-  <div class="responsive">
-    <div class="img">
-        <img src="static/crumple.jpg" alt="crumple">
-      <div class="desc">crumple</div>
-    </div>
-  </div>
-
-  <div class="responsive">
-      <div class="img">
-          <img src="static/kerrytown-court.jpg" alt="kerrytown-court" >
-        <div class="desc">Add a description of the image here</div>
-      </div>
-  </div>
-
-  <div class="responsive">
-      <div class="img">
-          <img src="static/kerrytown-court.jpg" alt="kerrytown-court"  >
-        <div class="desc">Add a description of the image here</div>
-      </div>
-  </div>
 
 <div class="responsive">
-    <div class="img">
-        <img src="static/kerrytown-court.jpg" alt="kerrytown-court"  >
-      <div class="desc">Add a description of the image here</div>
-    </div>
+  <div class="img">
+      <img src="static/kerrytown-court.jpg" alt="Trolltunga Norway">
+    <div class="desc">Trolltunga Norway</div>
   </div>
+</div>
 
-  <div class="responsive">
-      <div class="img">
-          <img src="static/kerrytown-court.jpg" alt="kerrytown-court"  >
-        <div class="desc">Add a description of the image here</div>
-      </div>
+
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Forest" >
+    <div class="desc">Forest Bridge</div>
   </div>
+</div>
 
-  <div class="responsive">
-      <div class="img">
-          <img src="static/kerrytown-court.jpg" alt="kerrytown-court"  >
-        <div class="desc">Add a description of the image here</div>
-      </div>
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Northern Lights" >
+    <div class="desc">Northern Lights, Norway</div>
   </div>
+</div>
 
-  <div class="clearfix"></div>
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Mountains" >
+    <div class="desc">Beautiful Mountains</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+      <img src="static/kerrytown-court.jpg" alt="Trolltunga Norway">
+    <div class="desc">Trolltunga Norway</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Forest" >
+    <div class="desc">Forest Bridge</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Northern Lights" >
+    <div class="desc">Northern Lights, Norway</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Mountains" >
+    <div class="desc">Beautiful Mountains</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <img src="static/kerrytown-court.jpg" alt="Mountains" >
+    <div class="desc">Beautiful Mountains</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -159,6 +154,34 @@
   <div id="caption"></div>
 </div>
 
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+   images[i].onclick = function(){
+       modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+       captionText.innerHTML = this.nextElementSibling.innerHTML;
+   }
+}
+</script>
+
 </div>
-</div>
+
 {%endblock%}
