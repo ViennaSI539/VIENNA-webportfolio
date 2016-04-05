@@ -14,6 +14,7 @@ h2 {
 /*header hides on scoll up, shows on scroll down*/
 header {
     position: fixed;
+        width: 100%;
 }
 
 .nav-up {
@@ -22,7 +23,7 @@ header {
 
 @media (min-width:320px)and (max-width:768px){
     .nav-up{
-        top:-235px;
+        top:-390px;
     }
 }
 
@@ -123,13 +124,30 @@ ul#tab-justified{
 }
 
 @media (min-width:320px)and (max-width:768px){
+     ul#tab-justified{
+  
+    display:block;
+    margin-bottom: 5px;
+   
+}
+     .nav-justified>li>a{
+    margin-bottom: 0px;
+    }
+
+    img.non-transparent{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
     .navbar-header {
-        display:inline-block;
+        display:none;
         float:right;
     }
 
     .left-side{
-        display:inline-block;
+        display:block;
+        float: none;
     }
 }
 
@@ -137,6 +155,7 @@ ul#tab-justified{
     ul#tab-justified{
     display:block;
     margin-bottom: 5px;
+    
 }
     ul#tablist{
         display:none;
@@ -182,7 +201,7 @@ button {
 
 @media  (min-width: 320px) and (max-width:768px){
     .placeholder {
-    height:235px;
+    height:390px;
 }
 }
 
@@ -216,6 +235,12 @@ button {
 
 .carousel-caption h3{
       font-size: 50px;
+}
+
+@media  (min-width: 320px) and (max-width:768px){
+    .carousel-caption h3{
+      font-size: 30px;
+}
 }
 
 .center {
@@ -282,47 +307,6 @@ button {
       z-index: 5;
 }
 
-@media  (min-width: 768px) and (max-width:992px){
-    .carousel-control {
-        top: 30%;
-}
-    .carousel-indicators {
-        top: 65%;
-}
-}
-
-@media  (max-width: 992px){
-   .carousel-inner{
-  width:100%;
-  height: 380px;
-}
-}
-
-
-@media  (max-width:768px){
-    .carousel-indicators {
-	    top: 33%;
-}
-}
-
-@media  (max-width:768px){
-    .carousel-caption {
-	    padding-bottom: 0px;
-}
-}
-
-@media  (max-width:768px){
-		.carousel-control {
-	    top: 13%;
-}
-}
-
-@media  (max-width: 480px){
-   .carousel-inner > .item > a > img {
-   height: 380px;
-   overflow: hidden;
-}
-}
 /*title-wrapper portfolio---------------------------------*/
 #title-wrap {
 	height: 250px;
@@ -443,11 +427,12 @@ div.desc {
 .close {
     position: absolute;
     top: 100px;
-    right: 29%;
+    right: 12%;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: lighter;
     transition: 0.3s;
+     z-index:10;
 }
 
 .close:hover,
@@ -464,6 +449,7 @@ div.desc {
     }
     .modal-content {
         width: 50%;
+        top:20%;
     }
     .close{
        top: 100px;
@@ -471,11 +457,25 @@ div.desc {
     }
 }
 
-@media  (max-width: 500px){
+@media  (min-width: 320px) and (max-width:768px){
     .responsive {
         width: 100%;
     }
+    .modal-content {
+        width: 70%;
+        top: 10%;
+    }
+    .close{
+        top: 150px;
+        right: 9%; 
+        
+    }
+
+    #caption{
+        padding: 60px 0;
+    }
 }
+
 
 /* Clear Floats */
 .clearfix:after {
@@ -606,17 +606,62 @@ box-shadow:         0px 0px 8px 0px #337ab7;
         width:80%;
     }
 }
+
+@media (min-width: 320px) and (max-width: 768px){
+    form.center.text-center{
+        width:80%;
+        margin:0 auto;
+    }
+    #leave-a-message {
+        width:100%;
+}
+}
 /*
 https://stackoverflow.com/questions/25685794/css-image-border-glow-when-hover-with-individual-color
 */
 
 /*video*/
-iframe {
+.video iframe {
   width:100%;
-  margin: 0 auto;
+  margin:0 auto;
   margin-bottom: 20px;
+   display: block!important;
+    margin-left: auto !important;
+    margin-right: auto!important;
 }
 
 .video p{
   margin-bottom: 50px;
+}
+
+/*resume*/
+@media (min-width: 320px) and (max-width: 768px){
+img.container{
+    width: 100%;
+}
+}
+
+#download {
+      margin-top: 50px;
+}
+
+#download a{
+
+    background-color: #337ab7;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#download a:hover {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+ -webkit-box-shadow: 0px 0px 8px 0px #337ab7;
+-moz-box-shadow:    0px 0px 8px 0px #337ab7;
+box-shadow:         0px 0px 8px 0px #337ab7;
 }
