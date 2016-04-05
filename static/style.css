@@ -5,8 +5,6 @@ body{
 	padding-top: 128px;
 }
 
-
-
 h2 {
 	text-align: left;
 	color:blue;
@@ -22,7 +20,20 @@ header {
     top: -128px;
 }
 
+@media (min-width:320px)and (max-width:768px){
+    .nav-up{
+        top:-235px;
+    }
+}
+
+@media (min-width:768px)and (max-width:992px){
+    .nav-up{
+        top:-178px;
+    }
+}
+
 .info-left {
+    display: inline-block;
 	padding-left: 0px;
 	margin-bottom: 0px;
 }
@@ -39,62 +50,16 @@ header {
 	margin:0px;
 }
 
+.social-media{
+    float: right;
+    margin-bottom: 0px;
+}
+
 .social-media li{
 	float: right;
 	display: inline-block;
 	padding: 8px;
 
-}
-
-@media only screen and (max-width:768px){
-    .col-sm-8{
-    	width:70%;
-}
-}
-
-@media only screen and (max-width:768px){
-    .col-sm-4{
-    	width:30%;
-}
-}
-
-@media only screen and (max-width:992px){
-    #info-wrap{
-    	width:100%;
-}
-}
-
-
-
-@media only screen and (max-width:992px){
-    .left-side{
-    	width:66.67%;
-}
-}
-
-@media only screen and (max-width:992px){
-    .nav{
-    	float:right;
-    	margin-right:15px;
-}
-}
-
-
-@media only screen and (max-width: 480px){
-    .info-left p {
-		padding: 8px;
-		margin-bottom: 0px;
-		text-align: center;
-		}
-}
-
-@media only screen and (max-width:480px){
-    .social-media{
-        display: ;
-		padding: 8px;
-		margin: auto;
-		text-align: center;
-		}
 }
 
 #info-wrap {
@@ -106,12 +71,33 @@ header {
 	line-height: 20px;
 	padding-top: 0px;
 	padding-bottom: 0px;
+}
 
+@media (min-width:320px)and (max-width:768px){
+    .info-left li{
+        display:block;
+        text-align: center;
+    }
+    .info-left{
+        display:block;
+    }
+    .social-media li{
+        float:none;
+    }
+
+    .social-media{
+        text-align:center;
+    }
 }
 
 /*navbar */
-#navbar-wrap {
-	background-image: url(bg.jpg);
+ul#tab-justified{
+    display: none;
+}
+
+.left-side{
+    display: inline;
+    float: left;
 }
 
 #tablist{
@@ -136,23 +122,76 @@ header {
   border-radius: 5px; 
 }
 
+@media (min-width:320px)and (max-width:768px){
+    .navbar-header {
+        display:inline-block;
+        float:right;
+    }
+
+    .left-side{
+        display:inline-block;
+    }
+}
+
+@media (min-width:768px)and (max-width:992px){
+    ul#tab-justified{
+    display:block;
+    margin-bottom: 5px;
+}
+    ul#tablist{
+        display:none;
+    }
+
+    .navbar-header {
+        display:inline-block;
+        float:right;
+    }
+    .left-side{
+        display:block;
+        float:none;
+    }
+    h1#logo.logo{
+        margin-top: :15px;
+        margin-bottom: 15px;
+    }
+    ul.social-media{
+        width:30%;
+    }
+    .container{
+        width: 93%;
+    }
+    }
+
+
+
+/*collapse navbar*/
+button {
+    top:50%;
+    color: #337ab7;
+    z-index: 5;
+}
+
+#navbar-wrap {
+    background-image: url(bg.jpg);
+}
 
 /*placeholder------------------------------*/
 .placeholder {
 	height:129px;
 }
 
-@media only screen and (max-width:992px){
+@media  (min-width: 320px) and (max-width:768px){
     .placeholder {
-	height:128px;
+    height:235px;
 }
 }
 
-@media only screen and (max-width: 480px){
+@media  (min-width: 768px) and (max-width:992px){
     .placeholder {
-	height:298px;
+    height:178px;
 }
 }
+
 
 /* bootstrap carousel width and height---------*/
 .tales {
@@ -243,13 +282,16 @@ header {
       z-index: 5;
 }
 
-@media only screen and (max-width:992px){
+@media  (min-width: 768px) and (max-width:992px){
     .carousel-control {
-	    top: 20%;
+        top: 30%;
+}
+    .carousel-indicators {
+        top: 65%;
 }
 }
 
-@media only screen and (max-width: 992px){
+@media  (max-width: 992px){
    .carousel-inner{
   width:100%;
   height: 380px;
@@ -257,33 +299,25 @@ header {
 }
 
 
-
-@media only screen and (max-width:992px){
-    .carousel-indicators {
-	    top: 45%;
-}
-}
-
-
-@media only screen and (max-width:768px){
+@media  (max-width:768px){
     .carousel-indicators {
 	    top: 33%;
 }
 }
 
-@media only screen and (max-width:768px){
+@media  (max-width:768px){
     .carousel-caption {
 	    padding-bottom: 0px;
 }
 }
 
-@media only screen and (max-width:768px){
+@media  (max-width:768px){
 		.carousel-control {
 	    top: 13%;
 }
 }
 
-@media only screen and (max-width: 480px){
+@media  (max-width: 480px){
    .carousel-inner > .item > a > img {
    height: 380px;
    overflow: hidden;
@@ -424,17 +458,20 @@ div.desc {
 }
 
 /* Responsive Columns */
-@media only screen and (max-width: 700px){
+@media  (min-width: 768px) and (max-width:992px){
     .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
+        width: 50%;
     }
     .modal-content {
-        width: 100%;
+        width: 50%;
+    }
+    .close{
+       top: 100px;
+        right: 21%; 
     }
 }
 
-@media only screen and (max-width: 500px){
+@media  (max-width: 500px){
     .responsive {
         width: 100%;
     }
@@ -562,8 +599,15 @@ input:hover, textarea:hover{
 -moz-box-shadow:    0px 0px 8px 0px #337ab7;
 box-shadow:         0px 0px 8px 0px #337ab7;
 }
+
+
+@media (min-width: 768px) and (max-width: 992px){
+    form.center.text-center{
+        width:80%;
+    }
+}
 /*
-http://stackoverflow.com/questions/25685794/css-image-border-glow-when-hover-with-individual-color
+https://stackoverflow.com/questions/25685794/css-image-border-glow-when-hover-with-individual-color
 */
 
 /*video*/

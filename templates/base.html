@@ -16,8 +16,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="static/script.js"></script>
 	<script type="text/javascript" src="processing.js"></script>
-
-	 <link rel="stylesheet" type="text/css" href="static/style.css"/>
+	 <link rel="stylesheet" type="text/css" href="static/style.css" medeia="screen"/>
 	 <!--set favicon-->
 	 <link rel="shortcut icon" href="static/icon.png">
 </head>
@@ -29,8 +28,7 @@
 		<header id="header" class="navbar-fixed-top" > <!--bootstrap-->
 				<div id="info-wrap">
 					<div class="container">
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<ul class="info-left">
+							<ul class="info-left class="col-lg-8 col-md-8 col-sm-8 col-xs-12"">
 								<li>
 									<p><img src = "static/email.png" alt="email" width="12"/>
 										qinyingl@umich.edu</p>
@@ -44,9 +42,9 @@
 										Ann Arbor, MI 48105</p>
 								</li>
 							</ul>
-						</div> 
-						<div class="col-sm-4 col-xs-12">
-							<ul class="social-media">
+					 
+						
+							<ul class="social-media col-sm-4 col-xs-12">
 								<li><a href="https://www.linkedin.com/in/qinying-li-277522b6?trk=hp-identity-photo">
 								<img src = "static/linkedin.png" alt="linkedin" width="20"/></a>
 								</li>
@@ -55,7 +53,7 @@
 								</li>								
 							</ul>
 						</div>
-					</div>
+					
 				</div >
 
 				<div id="navbar-wrap">
@@ -67,8 +65,18 @@
 								</h1> 
 							</div>
 						</div>
-						<div >
-							<ul class="nav nav-pills custom-pills" id="tablist"> <!--bootstrap-->
+						<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+
+						      </button>
+						  </div>
+						  	<div class="collapse navbar-collapse">
+							<ul class="nav nav-pills custom-pills " id="tablist"> <!--bootstrap-->
+
+
 								<li {% if title == "HOME"%} class = "active" {% endif %}><a href = "index.html">HOME</a></li>
 								<li {% if title == "SELECTEDWORKS"%} class = "active" {% endif %}><a href="/index.html#title-wrap"> SELECTED WORKS</a></li>
 								<li {% if title == "VIDEO"%} class = "active" {% endif %}><a href = "video.html">VIDEO</a></li>
@@ -76,9 +84,23 @@
 								<li {% if title == "CONTACT"%} class = "active" {% endif %}><a href = "contact.html">CONTACT</a></li>
 								
 							</ul>
-						</div>	
-					</div>
-				</div>		
+						</div>
+
+							<ul class="nav nav-pills custom-pills nav-justified" id="tab-justified"> <!--bootstrap-->
+
+
+								<li {% if title == "HOME"%} class = "active" {% endif %}><a href = "index.html">HOME</a></li>
+								
+								<li {% if title == "VIDEO"%} class = "active" {% endif %}><a href = "video.html">VIDEO</a></li>
+								<li  {% if title == "RESUME"%} class = "active" {% endif %}><a href = "resume.html">RESUME</a></li>
+								<li {% if title == "CONTACT"%} class = "active" {% endif %}><a href = "contact.html">CONTACT</a></li>
+								
+							</ul>
+						</div>
+
+					</div>	
+				</div>
+			</div>		
 		</header>
    
 
